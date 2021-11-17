@@ -42,6 +42,5 @@ const styles = StyleSheet.create({
     marginBottom: 2,
     textAlign: "left",
     backgroundColor: "yellow",
-    alignItems:"flex-",
   },
 });
