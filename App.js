@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, TextInput, ScrollView } from "react-native";
+import { StyleSheet, Text, View, ScrollView, Image } from "react-native";
+import { SearchBar } from "react-native-elements";
 
 export default function App() {
   return (
@@ -9,13 +10,40 @@ export default function App() {
         <View style={styles.header}>
           <Text>Woman Item</Text>
         </View>
-        <TextInput style={styles.text} />
+
+        <SearchBar style={styles.SearchBar} placeholder="Type Here..." />
+
         <View style={styles.items}>
-          <Text style={styles.item1}>Item 1</Text>
-          <StatusBar style="auto" />
-          <Text style={styles.item2}>Item 2</Text>
-          <Text style={styles.item3}>Item 3</Text>
-          <Text style={styles.item4}>Item 4</Text>
+          <View>
+            <Image
+              source={require("./logo.png")}
+              style={{ height: 100, width: 100, marginTop: 20 }}
+            />
+            <Text style={styles.item}>Item 1</Text>
+          </View>
+
+          <View>
+            <Image
+              source={require("./logo.png")}
+              style={{ height: 100, width: 100, marginTop: 20 }}
+            />
+
+            <Text style={styles.item}>Item 2</Text>
+          </View>
+          <View>
+            <Image
+              source={require("./logo.png")}
+              style={{ height: 100, width: 100, marginTop: 20 }}
+            />
+            <Text style={styles.item}>Item 3</Text>
+          </View>
+          <View>
+            <Image
+              source={require("./logo.png")}
+              style={{ height: 100, width: 100, marginTop: 20 }}
+            />
+            <Text style={styles.item}>Item 4</Text>
+          </View>
         </View>
       </ScrollView>
     </View>
@@ -28,33 +56,38 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    
   },
   header: {
     marginTop: 100,
     marginBottom: 100,
-
     backgroundColor: "blue",
     flex: 1,
     flexDirection: "row",
     textAlign: "left",
     width: 200,
-    fontSize: 25,
+    fontSize: 100,
     fontWeight: "bold",
   },
-  item: {
+  items: {
     flex: 1,
-    marginBottom: 2,
+    marginBottom: 0,
+    marginTop: 70,
     textAlign: "left",
     backgroundColor: "yellow",
     width: 400,
+    height:700,
   },
-  text: {
-    marginTop: 5,
-    marginBottom: 100,
-    marginLeft: 70,
-    marginRight: 20,
-    borderStyle: "solid",
-    borderColor: "black",
-    backgroundColor: "yellow",
+  item: {
+    marginTop: 10,
+    marginLeft: 250,
+    marginBottom:10,
+    flex: 1,
+    borderRadius: 20,
+  },
+  SearchBar: {
+    borderRadius: 30,
+    marginButtom: 60,
+    borderRadius: 30,
   },
 });
